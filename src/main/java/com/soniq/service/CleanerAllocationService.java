@@ -10,9 +10,16 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
+
 @Service
 public class CleanerAllocationService {
 
+    /***
+     * Optimizes the allocation of cleaners per structure based on the cleaning capacity of junior and senior cleaners.
+     * @param cleanerRequest
+     * @return List<Allocation> returns a list of Allocations.
+     * @exception ValidationException thrown if CleanerRequest configuration does not match spec.
+     */
     public List<Allocation> optimizeAllocation(CleanerRequest cleanerRequest) {
         validateRequest(cleanerRequest);
 
