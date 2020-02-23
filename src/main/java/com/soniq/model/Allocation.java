@@ -1,5 +1,6 @@
 package com.soniq.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Builder;
 import lombok.Data;
 
@@ -8,6 +9,8 @@ import lombok.Data;
 public class Allocation implements Comparable<Allocation> {
     private int senior;
     private int junior;
+
+    @JsonIgnore
     private int score;
 
     @Override
